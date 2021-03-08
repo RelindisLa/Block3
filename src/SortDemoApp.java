@@ -12,15 +12,15 @@ public class SortDemoApp {
         arr [5] = 4;
         arr [6] = 3;
         arrangeOrder(arr);
-
+        System.out.println();
+        System.out.println(Arrays.toString(arr));
         /*int[] arr2 = {54, 45, 33, 12, 77, 21, 99};
         arrangeOrder(arr2);
         Arrays.toString(arr) ist das gleiche wie:
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + ", ");
         } */
-        System.out.println();
-        System.out.println(Arrays.toString(arr));
+
 
         //for ()
 
