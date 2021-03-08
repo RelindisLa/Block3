@@ -4,11 +4,12 @@ public class Turmrechnen1 {
 
     long startValue = 202103;
 
-    for (long i = 0; i <= 9; i ++) {
+        System.out.println(startValue);
+    for (int i = 2; i <= 9; i ++) {
             System.out.println( startValue + " * " + i);
             startValue = startValue * i;
         }
-        for (long i = 2; i <= 9; i++) {
+        for (int i = 2; i <= 9; i++) {
             System.out.println(startValue + " / " + i);
             startValue = startValue / i;
 
