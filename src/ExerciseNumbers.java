@@ -17,9 +17,9 @@ public class ExerciseNumbers {
 
         System.out.println("die Durchschnittszahl ist: " + findAverage(arr));
 
-        System.out.println(Arrays.toString(findDubleArray(arr)));
+        //System.out.println(Arrays.toString(findDubleArray(arr)));
 
-        //System.out.println("folgende Zahlen sind mehrfach: " + Arrays.toString(returnDublicates(arr)));
+        System.out.println("folgende Zahlen sind mehrfach: " + Arrays.toString(returnDublicates(arr)));
 
 
     }
@@ -65,29 +65,38 @@ public class ExerciseNumbers {
 
 
     // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
-    public static int[] findDubleArray (int[] arr) {
+    /*public static int[] findDubleArray (int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             arr [i] = arr [i]*2;
         }
         return arr;
     }
-/*
+
+     */
+
+
     public static int[] returnDublicates (int[] arr) {
-        boolean sameNr = true;
-        while (sameNr == true) {
-            sameNr = false;
-            int i1 = arr[0];
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] == i1) {
-                    i1 = arr[i];
+        boolean aufsteigend = true;
+
+        while (aufsteigend == true) {
+            aufsteigend = false;
+            for (int i =0; i < arr.length; i++) {
+                for (int i2 =i + 1; i2 < arr.length; i2++) {
+                    if (String.valueOf(i)) equals(String.valueOf(i2));
+                    }
+                return arr;
+                }
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    aufsteigend = true;
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
+                    }
                 }
             }
         }
-        return arr;
-    } */
-
 
 }
+
+
