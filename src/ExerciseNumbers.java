@@ -82,7 +82,7 @@ public class ExerciseNumbers {
             aufsteigend = false;
             for (int i =0; i < arr.length; i++) {
                 for (int i2 =i + 1; i2 < arr.length; i2++) {
-                    if (String.valueOf(i)) equals(String.valueOf(i2));
+                    if (i < i2);
                     }
                 return arr;
                 }
@@ -94,7 +94,7 @@ public class ExerciseNumbers {
                     arr[i + 1] = temp;
                     }
                 }
-            }
+            }return arr;
         }
 
 }
