@@ -15,7 +15,7 @@ public class ExerciseNumbers<arr> {
 
         System.out.println("die Summe ist: " + findSumme(arr));
 
-        System.out.println("die Durchschnittszahl ist: " + findAverage(arr));
+        //System.out.println("die Durchschnittszahl ist: " + findAverage(arr));
 
         //System.out.println(Arrays.toString(findDubleArray(arr)));
 
@@ -60,12 +60,13 @@ public class ExerciseNumbers<arr> {
 
 
     // TODO 4: Write a method, calculating and returning the average over all numbers
-    public static int findAverage (int[] arr) {
+    /*public static int findAverage (int[] arr) {
 
         int average = findSumme(arr) / arr.length;
         return average;
-
     }
+
+     */
 
 
     // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
@@ -136,20 +137,8 @@ public class ExerciseNumbers<arr> {
 
 
     public static int [] findDoubleNumbers (int[] arr) {
-        boolean hasChanged = true;
-
-        while (hasChanged == true) {
-            hasChanged = false;
-            for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    hasChanged = true;
-
-                    int temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
 
 
         return arr;
