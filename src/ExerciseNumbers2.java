@@ -3,14 +3,14 @@ import java.util.Arrays;
 public class ExerciseNumbers2 {
 
     public static void main(String[] args) {
-        int[] arr1 = {
+        int[] arr = {
                 98, 97, 87, 86, 3, 81, 77, 74, 72, 69, 68, 65, 61,
                 51, 52, 59, 54, 47, 111, 42, 38, 51, 37, 29, 24, 81,
                 12, 29, 2, 17, 8};
 
-        System.out.println("arr.length = " + arr1.length);
+        System.out.println("arr.length = " + arr.length);
 
-        System.out.println("folgende Nummern sind doppelt: " + (Arrays.toString(findDoubleNumbers(arr1))));
+        System.out.println("folgende Nummern sind doppelt: " + (Arrays.toString(findDoubleNumbers(arr))));
 
 
 
