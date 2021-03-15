@@ -11,23 +11,23 @@ public class ExerciseNumbers2 {
         System.out.println("arr.length = " + arr.length);
 
         System.out.println("folgende Nummern sind doppelt: " + (Arrays.toString(findDoubleNumbers(arr))));
-
+        
 
 
     }
 
 
-
     public static int[] findDoubleNumbers(int[] arr) {
         Arrays.sort(arr);
-        int[] doppelteZahl = new int[3];
+        int[] doppelteZahl = new int[arr.length];
         int counter = 0;
 
 
         for (int i = 0; i < arr.length - 1; i++) {
+            int keep = arr[i];
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    arr[i] = doppelteZahl[counter];
+                if (arr[j] == keep) {
+                    arr[j] = doppelteZahl[counter];
                     counter++;
                 }
             }
