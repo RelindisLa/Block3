@@ -25,7 +25,7 @@ public class Schaltjahr {
     }
 
 
-    public static boolean istSchaltjahr (int year, boolean showPrintMessage) {
+    /*public static boolean istSchaltjahr (int year, boolean showPrintMessage) {
         if (year% 100 == 0) {
             if ( year % 400 == 0) {
                 System.out.println(year + " is a Leap Year");
@@ -33,6 +33,8 @@ public class Schaltjahr {
         }
         return year;
     }
+
+     */
 
     public static void isLeapYear (int year) {
 
