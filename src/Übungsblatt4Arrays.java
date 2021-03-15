@@ -4,7 +4,6 @@ public class Übungsblatt4Arrays {
 
     public static void main(String[] args) {
 
-
         int[] arr = {1, 45, 56, 23, 3, 89, 42, 22, 9, 18};
 
         System.out.println("Folgende Zahlen sind in der Reihe: ");
