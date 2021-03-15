@@ -72,8 +72,9 @@ public class Übungsblatt4Arrays {
     }
 
     public static int[] orderdArray (int[] numbers) {
-        Arrays.sort(numbers);
-        return numbers;
+        int [] numbers1 = numbers;
+        Arrays.sort(numbers1);
+        return numbers1;
     }
 
     public static int[] reverseArray2 (int[] numbers) {
