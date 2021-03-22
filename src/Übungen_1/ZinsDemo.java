@@ -6,15 +6,22 @@ public class ZinsDemo {
         double kontostand = 1000;
         double zinsen = 2.5;
 
-        System.out.println("bei Zinsen von " + zinsen + "%, erhält man beim Kontostand von € " + kontostand + " folgende Zinsen: " + neuerKonsostand(kontostand, zinsen));
+        System.out.println("bei Zinsen von " + zinsen + "%, erhält man beim Kontostand von € " + kontostand + " folgende Zinsen: " + erhalteneZinsen(kontostand, zinsen));
+        System.out.println("der neue Kontostand beträgt: € " + neuerKontostand(kontostand, zinsen));
 
 
     }
 
-    public static double neuerKonsostand (double kontostand, double zinsen) {
-        double konostandNeu;
-        konostandNeu = kontostand/100 * zinsen;
-        return konostandNeu;
+    public static double erhalteneZinsen(double kontostand, double zinsen) {
+        double neueZinsen;
+        neueZinsen = kontostand/100 * zinsen;
+        return neueZinsen;
+    }
+    
+    public static double neuerKontostand (double kontostand, double zinsen){
+        double neuKonto;
+        neuKonto = kontostand + (kontostand/100 * zinsen);
+        return neuKonto;
     }
 
 
