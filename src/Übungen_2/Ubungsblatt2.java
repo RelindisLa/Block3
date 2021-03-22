@@ -1,3 +1,5 @@
+package Übungen_2;
+
 public class Ubungsblatt2 {
     public static void main(String[] args) {
         int n1     = 1;
