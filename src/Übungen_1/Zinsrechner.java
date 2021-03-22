@@ -1,3 +1,5 @@
+package Übungen_1;
+
 public class Zinsrechner {
 
     public static void main(String[] args) {

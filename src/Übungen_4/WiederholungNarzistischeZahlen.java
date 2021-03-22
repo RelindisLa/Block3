@@ -1,3 +1,5 @@
+package Übungen_4;
+
 public class WiederholungNarzistischeZahlen {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Übungen_4;
+
 public class NarzistischeZahlen {
 
     /*
@@ -18,8 +20,7 @@ public class NarzistischeZahlen {
             int z1 = zahl / 100;
             int z2 = (zahl / 10) % 10;
             int z3 = zahl % 10;
-            double sum = 0;
-            sum = Math.pow(z1,3) + Math.pow(z2,3) + Math.pow(z3,3);
+            double sum = Math.pow(z1,3) + Math.pow(z2,3) + Math.pow(z3,3);
 
             if (sum == zahl) {
                 System.out.println(sum);

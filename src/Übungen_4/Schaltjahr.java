@@ -1,3 +1,5 @@
+package Übungen_4;
+
 public class Schaltjahr {
 
     public static void main(String[] args) {
@@ -78,11 +80,11 @@ public class Schaltjahr {
             }
 
             if (i % 100 == 0){
-                System.out.println( i + "-> kein Schaltjahr");
+                System.out.println( i + "-> kein Übungen_4.Schaltjahr");
             }
 
             if ( i % 400 == 0) {
-                System.out.println(i + " ist ein Schaltjahr");
+                System.out.println(i + " ist ein Übungen_4.Schaltjahr");
             }
         }
         return counter;

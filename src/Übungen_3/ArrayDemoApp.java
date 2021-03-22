@@ -1,3 +1,5 @@
+package Übungen_3;
+
 import java.util.Arrays;
 
 public class ArrayDemoApp {

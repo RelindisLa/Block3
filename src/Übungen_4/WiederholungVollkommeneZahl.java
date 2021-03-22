@@ -1,3 +1,5 @@
+package Übungen_4;
+
 public class WiederholungVollkommeneZahl {
 
     public static void main(String[] args) {
