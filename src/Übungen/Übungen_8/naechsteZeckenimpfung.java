@@ -1,4 +1,4 @@
-package Übungen._8;
+package Übungen.Übungen_8;
 
 public class naechsteZeckenimpfung {
 

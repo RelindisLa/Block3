@@ -1,4 +1,4 @@
-package Übungen._8;
+package Übungen.Übungen_8;
 
 public class PowerDemo {
 
@@ -37,9 +37,9 @@ public class PowerDemo {
         if (n == 1)
             return x;
         if (n % 2 == 0)
-           return powerSimple(x, n/2) * powerSimple(x, n/2);
+            return powerSimple(x, n / 2) * powerSimple(x, n / 2);
         else
-            return x * powerSimple(x, n/2) * powerSimple(x, n/2);
+            return x * powerSimple(x, n / 2) * powerSimple(x, n / 2);
     }
 
 
