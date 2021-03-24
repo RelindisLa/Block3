@@ -4,7 +4,7 @@ public class naechsteZeckenimpfung2 {
 
     int [] alter = new int[]{10,30,50,60,80};
     long[] letztesImpungsjahr = new long[]{2017,2014,2019,2018,2020};
-    String[] ersteAuffrischung = new String[]{"j","n","n","n","n"};
+    String[] ersteAuffrischung = new String[]{"j","n","n","j","n"};
 
     public static void main(String[] args) {
 
