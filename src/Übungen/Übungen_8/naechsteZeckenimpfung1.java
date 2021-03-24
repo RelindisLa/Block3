@@ -1,6 +1,6 @@
 package Übungen.Übungen_8;
 
-public class naechsteZeckenimpfung {
+public class naechsteZeckenimpfung1 {
 
     int [] alter = new int[]{10,30,50,60,80};
     long[] letztesImpungsjahr = new long[]{2017,2014,2019,2018,2020};
