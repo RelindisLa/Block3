@@ -20,6 +20,8 @@ public class BlackJackDemo {
         int anzahlSpiele = 3;
         System.out.println(blackJackWinnerIs(1,3));
 
+        System.out.println(isWinner(2));
+
 
 
     }
@@ -53,9 +55,11 @@ public class BlackJackDemo {
 
         for (int cards = 0; cards < 13; cards++) {
             for (int counter = 0; counter < 21; counter++) {
-                if (zufall * cards > counter){
+                if (zufall*cards > counter){
+                    System.out.println(zufall);
                     return winner = 0;
                 }
+                else return 1;
             }
 
         }
