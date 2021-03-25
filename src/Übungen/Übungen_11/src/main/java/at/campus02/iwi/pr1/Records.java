@@ -9,12 +9,12 @@ public class Records {
     static final double LIMIT_SINGLE = 20.0;
 
     public static void main(String[] args) {
-        final int[]    GENRES  = at.campus02.iwi.pr1.RecordsData.GENRES;
+        final int[] GENRES = at.campus02.iwi.pr1.RecordsData.GENRES;
         final String[] ARTISTS = at.campus02.iwi.pr1.RecordsData.ARTISTS;
         final double[] LENGTHS = at.campus02.iwi.pr1.RecordsData.LENGTHS;
 
 
-        System.out.println("ist es eine Singel? " + istSingle(LENGTHS,1));
+        System.out.println("ist es eine Singel? " + istSingle(LENGTHS, 1));
         System.out.println(GENRES.length);
         System.out.println(ARTISTS.length);
         System.out.println(LENGTHS.length);
@@ -52,12 +52,9 @@ public class Records {
         System.out.println(nextSingle(GENRES, LENGTHS, 199));
         System.out.println();
         System.out.println(nextFive(LENGTHS, GENRES, 0, 0));
-        System.out.println(nextFive(LENGTHS, GENRES, 1,0));
-        System.out.println(nextFive(LENGTHS, GENRES,2,163));
+        System.out.println(nextFive(LENGTHS, GENRES, 1, 0));
+        System.out.println(nextFive(LENGTHS, GENRES, 2, 163));
         System.out.println("18,51,20");
-
-
-
 
 
         // in minuten
@@ -73,7 +70,7 @@ public class Records {
     public static int plattenVonInterpret(String[] artists, String artist) {
         int counter = 0;
         for (int i = 0; i < artists.length; i++) {
-            if (artist.equals(artists[i])){
+            if (artist.equals(artists[i])) {
                 counter++;
             }
         }
@@ -85,19 +82,19 @@ public class Records {
         int[] allePlatten = new int[plattenVonInterpret(artists, artist)];
         // int[] allePlatten = ist ein leeres int Array mit reservierung für 8 int variablen
         int index = 0;
-            for (int i = 0; i < artists.length; i++) {
-                //Diese Schleife lauft alle Lieder durch von 1bis200 -> int i Bereich 0-199
-                if (artists[i].equals(artist)){
+        for (int i = 0; i < artists.length; i++) {
+            //Diese Schleife lauft alle Lieder durch von 1bis200 -> int i Bereich 0-199
+            if (artists[i].equals(artist)) {
 
-                    //artist.equals(artists[i])
-                    //  ist artist an Stelle Artist/Pos.i gleich artist, wenn ja, dann
-                    allePlatten[index] = i;
-                    //Also der allePlatten[0-7]  wird jeweils ein int i Bereich 0-199 zugewiesen.
-                    index++;
+                //artist.equals(artists[i])
+                //  ist artist an Stelle Artist/Pos.i gleich artist, wenn ja, dann
+                allePlatten[index] = i;
+                //Also der allePlatten[0-7]  wird jeweils ein int i Bereich 0-199 zugewiesen.
+                index++;
                 // allePlatten[37, 51, 63, 112, 115, 118, 133, 177]
-                }
-
             }
+
+        }
         return allePlatten; // Rückgabewert ist ein int-Array mit den Indizes der Platten des gewählten Interprete
     }
 
@@ -107,7 +104,7 @@ public class Records {
         int counter = 0;
 
         for (int alleSongs = 0; alleSongs < lengths.length; alleSongs++) {
-            if (istSingle(lengths,alleSongs) != true){
+            if (istSingle(lengths, alleSongs) != true) {
                 summeSongs += lengths[alleSongs];
                 counter++;
             }
@@ -120,8 +117,8 @@ public class Records {
         int counter = 0;
 
         for (int alleSongs = 0; alleSongs < lengths.length; alleSongs++) {
-           summeSongs += lengths[alleSongs];
-           counter++;
+            summeSongs += lengths[alleSongs];
+            counter++;
         }
         return summeSongs;
     }
@@ -129,33 +126,26 @@ public class Records {
     public static int nextSingle(int[] genres, double[] lengths, int current) {
         int index = 1;
         for (int i = current + 1; i < genres.length - 1; i++) {
-            if (lengths[i] < 20.0 &&  genres[i] == genres[current]){
-                    return current + index;
-                }
-            else index++;
-            }
+            if (lengths[i] < 20.0 && genres[i] == genres[current]) {
+                return current + index;
+            } else index++;
+        }
         return -1;
     }
 
     public static double nextFive(double[] lengths, int[] genres, int genre, int current) {
 
         double sum = 0;
-        int Apfel = current;
+        int newIndex = current;
 
-            int index = 0;
-            for (int i = Apfel + 1; i < genres.length - 1; i++) {
-                if (lengths[i] < 20.0 && genres[i] == genre) {
-                    sum = sum + lengths[i];
-                    index++;
-                            if(index == 5) return sum;
-                }
+        int index = 0;
+        for (int i = newIndex + 1; i < genres.length - 1; i++) {
+            if (lengths[i] < 20.0 && genres[i] == genre) {
+                sum = sum + lengths[i];
+                index++;
+                if (index == 5) return sum;
             }
-
-
-
-
-
-
+        }
         return sum; //Spieldauer dieser nächsten 5 Singles in Summe ist
     }
 }
