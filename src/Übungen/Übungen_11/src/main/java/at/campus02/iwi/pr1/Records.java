@@ -2,6 +2,9 @@ package at.campus02.iwi.pr1;
 
 import java.util.Arrays;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class Records {
     static final double LIMIT_SINGLE = 20.0;
 
@@ -31,6 +34,28 @@ public class Records {
         System.out.println();
         System.out.println(Arrays.toString(nimmInterpret(ARTISTS, "Nirvana")));
         System.out.println(Arrays.toString(nimmInterpret(ARTISTS, "Kroko Jack")));
+        System.out.println(mittlereDauerAlbum(LENGTHS));
+        System.out.println(gesamtspieldauer(LENGTHS));
+        System.out.println();
+        System.out.println(nextSingle(GENRES, LENGTHS, 0));
+        System.out.println(istSingle(LENGTHS, 64));
+
+        System.out.println(nextSingle(GENRES, LENGTHS, 3));
+        System.out.println(istSingle(LENGTHS, 4));
+
+        System.out.println(nextSingle(GENRES, LENGTHS, 4));
+        System.out.println(istSingle(LENGTHS, 7));
+
+        System.out.println(nextSingle(GENRES, LENGTHS, 8));
+        System.out.println(istSingle(LENGTHS, 9));
+
+        System.out.println(nextSingle(GENRES, LENGTHS, 199));
+        System.out.println();
+        System.out.println(nextFive(LENGTHS, GENRES, 0, 0));
+        System.out.println(nextFive(LENGTHS, GENRES, 1,0));
+        System.out.println(nextFive(LENGTHS, GENRES,2,163));
+        System.out.println("18,51,20");
+
 
 
 
@@ -87,19 +112,50 @@ public class Records {
                 counter++;
             }
         }
-
         return summeSongs / counter; // double Variable
     }
 
     public static double gesamtspieldauer(double[] lengths) {
-        return 0.0;
+        double summeSongs = 0;
+        int counter = 0;
+
+        for (int alleSongs = 0; alleSongs < lengths.length; alleSongs++) {
+           summeSongs += lengths[alleSongs];
+           counter++;
+        }
+        return summeSongs;
     }
 
     public static int nextSingle(int[] genres, double[] lengths, int current) {
-        return 0;
+        int index = 1;
+        for (int i = current + 1; i < genres.length - 1; i++) {
+            if (lengths[i] < 20.0 &&  genres[i] == genres[current]){
+                    return current + index;
+                }
+            else index++;
+            }
+        return -1;
     }
 
     public static double nextFive(double[] lengths, int[] genres, int genre, int current) {
-        return 0.0;
+
+        double sum = 0;
+        int Apfel = current;
+
+            int index = 0;
+            for (int i = Apfel + 1; i < genres.length - 1; i++) {
+                if (lengths[i] < 20.0 && genres[i] == genre) {
+                    sum = sum + lengths[i];
+                    index++;
+                            if(index == 5) return sum;
+                }
+            }
+
+
+
+
+
+
+        return sum; //Spieldauer dieser nächsten 5 Singles in Summe ist
     }
 }
